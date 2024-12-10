@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <title>Autoassist Pro</title>
+</head>
+
+<body>
+  <!-- OTP Verification Form -->
+  <div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card border border-dark-subtle rounded-4 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+              <!-- Logo and Header -->
+              <div class="text-center mb-4">
+                <a href="#!">
+                  <img src="Assets/Frame 46.svg" alt="Autoassist Logo" class="img-fluid" style="max-width: 400px;">
+                </a>
+                <h2 class="h4 text-center mt-3">OTP Verification</h2>
+                <p class="text-muted">Enter the 6-digit code sent to your email/phone.</p>
+              </div>
+
+              <!-- OTP Input Form -->
+              <form action="#!" method="POST">
+                <div class="row g-3 justify-content-center">
+                  <div class="col-12">
+                    <div class="d-flex justify-content-center gap-2">
+                      <!-- OTP Inputs -->
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                      <input type="text" maxlength="1" class="form-control otp-input text-center" required>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-lg w-100" type="submit">Verify</button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Resend OTP -->
+              <p class="text-center mt-4 text-muted">
+                Didn't receive the OTP? <a href="#!" class="link-primary">Resend OTP</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Automatically move to the next input field on input
+    const otpInputs = document.querySelectorAll('.otp-input');
+
+    otpInputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        if (input.value.length === 1 && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (e.key === "Backspace" && input.value === '' && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .otp-input {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .otp-input:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  </style>
+</body>
+
+</html>
