@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Assets/Frame.png" type="image/x-icon">
+  <title>Autoassist Pro</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="Assets/Frame 46.png" alt="Autoassist Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Favorite</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Zaire Bergson
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="overlay">
+      <h1>Buy Your Dream <br> Car Today!</h1>
+    </div>
+  </section>
+
+  <!-- Search Form -->
+  <div class="container">
+    <div class="search-form custom-z-index ">
+      <form>
+        <div class="row g-3">
+          <div class="col-md-4 col-lg-3">
+            <label for="brand" class="form-label">Brand</label>
+            <select id="brand" class="form-select">
+              <option selected>Any</option>
+              <option value="1">Brand 1</option>
+              <option value="2">Brand 2</option>
+              <option value="3">Brand 3</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="model" class="form-label">Model</label>
+            <select id="model" class="form-select">
+              <option selected>Any</option>
+              <option value="1">Model 1</option>
+              <option value="2">Model 2</option>
+              <option value="3">Model 3</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="registrationDate" class="form-label">Registration date from</label>
+            <select id="registrationDate" class="form-select">
+              <option selected>Any</option>
+              <option value="1">2020</option>
+              <option value="2">2021</option>
+              <option value="3">2022</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="kilometers" class="form-label">Kilometers to</label>
+            <select id="kilometers" class="form-select">
+              <option selected>Any</option>
+              <option value="1">10,000</option>
+              <option value="2">20,000</option>
+              <option value="3">30,000</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="price" class="form-label">Price</label>
+            <select id="price" class="form-select">
+              <option selected>Any</option>
+              <option value="1">$10,000</option>
+              <option value="2">$20,000</option>
+              <option value="3">$30,000</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="vehicleType" class="form-label">Vehicle Type</label>
+            <select id="vehicleType" class="form-select">
+              <option selected>Any</option>
+              <option value="1">SUV</option>
+              <option value="2">Sedan</option>
+              <option value="3">Truck</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <label for="fuelType" class="form-label">Fuel Type</label>
+            <select id="fuelType" class="form-select">
+              <option selected>Any</option>
+              <option value="1">Petrol</option>
+              <option value="2">Diesel</option>
+              <option value="3">Electric</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-lg-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">25,065 Offers</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Recently Viewed Cars -->
+  <div class="container my-4">
+    <h2 class="mb-4">Recently viewed cars</h2>
+    <p class="text-muted">Cars You've Seen</p>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Tata Curvv">
+          <div class="card-body">
+            <h5 class="card-title">Tata Curvv</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Land Rover Defender">
+          <div class="card-body">
+            <h5 class="card-title">Land Rover Defender</h5>
+            <p class="card-text">
+              <strong>€ 80,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Mercedes-Benz GLA">
+          <div class="card-body">
+            <h5 class="card-title">Mercedes-Benz GLA</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="BMW X7">
+          <div class="card-body">
+            <h5 class="card-title">BMW X7</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Category Section -->
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 class="fw-bold">Brand Category</h4>
+      <a href="#" class="text-primary">View all</a>
+    </div>
+    <p class="text-muted">There are 30+ Brand Categories Available</p>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="Assets/Group.png" alt="Audi" class="brand-logo">
+          <h6>Audi</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=BMW" alt="BMW" class="brand-logo">
+          <h6>BMW</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Jeep" alt="Jeep" class="brand-logo">
+          <h6>Jeep</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Skoda" alt="Skoda" class="brand-logo">
+          <h6>Skoda</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=KIA" alt="KIA" class="brand-logo">
+          <h6>KIA</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Hyundai" alt="Hyundai" class="brand-logo">
+          <h6>Hyundai</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Peugeot" alt="Peugeot" class="brand-logo">
+          <h6>Peugeot</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Tesla" alt="Tesla" class="brand-logo">
+          <h6>Tesla</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Mercedes" alt="Mercedes" class="brand-logo">
+          <h6>Mercedes</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Toyota" alt="Toyota" class="brand-logo">
+          <h6>Toyota</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Ford" alt="Ford" class="brand-logo">
+          <h6>Ford</h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="brand-card">
+          <img src="https://via.placeholder.com/100x60?text=Volvo" alt="Volvo" class="brand-logo">
+          <h6>Volvo</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Recently Viewed Cars -->
+   <div class="container my-4">
+    <h2 class="mb-4">Cars Recommendation</h2>
+    <p class="text-muted">Your Guide to the perfect Car</p>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Tata Curvv">
+          <div class="card-body">
+            <h5 class="card-title">Tata Curvv</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Land Rover Defender">
+          <div class="card-body">
+            <h5 class="card-title">Land Rover Defender</h5>
+            <p class="card-text">
+              <strong>€ 80,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="Mercedes-Benz GLA">
+          <div class="card-body">
+            <h5 class="card-title">Mercedes-Benz GLA</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="Assets/image 19.png" class="card-img-top" alt="BMW X7">
+          <div class="card-body">
+            <h5 class="card-title">BMW X7</h5>
+            <p class="card-text">
+              <strong>€ 65,500</strong><br>
+              <span>Petrol</span> &bull; <span>Automatic</span> &bull; <span>13 Kmpl</span>
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-logo">
+          <img src="Assets/logo.png" alt="Autoassist Logo" />
+        </div>
+        <div class="footer-contact">
+          <p>Contact us at:</p>
+          <p>+49 123 456 7890</p>
+          <p>info@autoassist.com</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="download-app">
+        <h4>Get the Autoassist App</h4>
+        <div class="app-links">
+          <a href="#">Google Play</a>
+          <a href="#">App Store</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
