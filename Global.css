@@ -9,14 +9,9 @@
     /* background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)) */
 }
 
-/* body{
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-       
-    } */
+.social-btn {
+    flex: 1; 
+}
 
 .otp-input {
     width: 3rem;
@@ -295,4 +290,195 @@ body {
   .brand-card h6 {
     font-size: 16px;
     margin: 0;
+  }
+
+  .car-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.car-section {
+    padding: 20px;
+}
+
+.car-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.car-section ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.car-section ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: #000;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Why Choose Us---------------- */
+.feature-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Available Used Customer Satisfaction */
+.stats-item {
+    text-align: center;
+}
+
+.stats-item i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.stats-item h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.stats-item p {
+    margin-bottom: 0;
+    color: #777;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Review from Customer */
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    color: orange;
+}
+
+.review-author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.review-author::before {
+    content: "— ";
+}
+
+/* The Latest Car News */
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card-body {
+    padding: 15px;
+}
+
+.news-date {
+    font-size: 14px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+
+.news-desc {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.view-all {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* FAQ */
+.accordion-button {
+    color: #333;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #007bff;
+    background-color: #f8f9fa;
+    box-shadow: none;
+}
+
+.accordion-body {
+    font-size: 14px;
+    color: #666;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #111827; /* Dark background */
+    color: #ffffff; /* White text */
+  }
+  footer a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .footer-logo {
+    max-width: 20rem;
   }
