@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <title>Password Protected Access</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .access-card {
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Access Screen Form -->
+  <div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card access-card p-4">
+            <div class="card-body text-center">
+              <!-- Header -->
+              <div class="text-center mb-4">
+                <a href="#!">
+                  <img src="Assets/Frame 46.svg" alt="Autoassist Logo" class="img-fluid" style="max-width: 300px;">
+                </a>
+                <h2 class="h4 text-center mt-3">Access Screen</h2>
+                <hr>
+              </div>
+          
+
+              <!-- Password Input Form -->
+              <form id="accessForm">
+                <div class="mb-3 position-relative">
+                  <input type="password" id="passwordInput" class="form-control text-center" placeholder="Enter the Password" required>
+                  <span class="password-toggle" id="togglePassword">🙈</span>
+                </div>
+                <div class="form-check mb-3">
+                  <input type="checkbox" id="rememberPassword" class="form-check-input" style="margin-right: 5px;">
+                  <label for="rememberPassword" class="form-check-label">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Access</button>
+              </form>
+              
+
+              <p class="text-danger mt-3 d-none" id="errorMessage">Invalid password. Please try again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const passwordField = document.getElementById("passwordInput");
+    const togglePassword = document.getElementById("togglePassword");
+    const rememberPasswordCheckbox = document.getElementById("rememberPassword");
+    const errorMessage = document.getElementById("errorMessage");
+    const correctPassword = "@Ankur@1994";
+
+    // Show/Hide Password Functionality
+    togglePassword.addEventListener("click", function () {
+      const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+      passwordField.setAttribute("type", type);
+
+      // Toggle Eye Icon
+      togglePassword.textContent = type === "password" ?  "🙈" : "👁️";
+    });
+
+    // Form Submission Logic
+    document.getElementById("accessForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent form submission
+      const enteredPassword = passwordField.value;
+
+      if (enteredPassword === correctPassword) {
+        // If "Remember Password" is checked, save it in a cookie for 24 hours
+        if (rememberPasswordCheckbox.checked) {
+          const expirationDate = new Date();
+          expirationDate.setHours(expirationDate.getHours() + 24); // Set expiration for 24 hours
+          document.cookie = `savedPassword=${enteredPassword}; expires=${expirationDate.toUTCString()}; path=/`;
+        }
+        // Redirect to the protected page
+        window.location.href = "login.html"; // Replace with your actual page
+      } else {
+        // Show error message if password is incorrect
+        errorMessage.classList.remove("d-none");
+      }
+    });
+
+    // Check for saved password in cookies on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      const cookies = document.cookie.split("; ");
+      const savedPasswordCookie = cookies.find(row => row.startsWith("savedPassword="));
+
+      if (savedPasswordCookie) {
+        const savedPassword = savedPasswordCookie.split("=")[1];
+        passwordField.value = savedPassword; // Pre-fill the password field
+        rememberPasswordCheckbox.checked = true; // Check the checkbox
+      }
+    });
+  </script>
+</body>
+
+</html>
