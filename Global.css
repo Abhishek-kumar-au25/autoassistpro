@@ -10,7 +10,7 @@
 }
 
 .social-btn {
-    flex: 1; 
+    flex: 1;
 }
 
 .otp-input {
@@ -94,6 +94,7 @@ body {
     font-size: 36px;
     margin-bottom: 20px;
 }
+
 
 .search-bar {
     display: flex;
@@ -234,9 +235,10 @@ body {
 .footer .app-links a:hover {
     text-decoration: underline;
 }
+
 /* --------------------------------------------------------
  */
- .hero-section {
+.hero-section {
     z-index: -1;
     position: relative;
     background: url('Assets/image\ 19.png') center/cover no-repeat;
@@ -248,11 +250,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .hero-section h1 {
     font-size: 4rem;
     font-weight: bold;
     padding-top: 10%;
 }
+
 .search-form {
     background: white;
     border-radius: 10px;
@@ -263,13 +267,13 @@ body {
 
 .custom-z-index {
     z-index: 10;
-  }
+}
 
-.overlay{
+.overlay {
     min-width: 100%;
     min-height: 100%;
     background-color: rgba(0, 0, 0, 0.484);
-}  
+}
 
 .brand-card {
     border: 1px solid #ddd;
@@ -279,20 +283,23 @@ body {
     transition: transform 0.2s;
     max-width: 100%;
 
-  }
-  .brand-card:hover {
+}
+
+.brand-card:hover {
     transform: scale(1.05);
-  }
-  .brand-logo {
+}
+
+.brand-logo {
     max-height: 2rem;
     margin-bottom: 2rem;
-  }
-  .brand-card h6 {
+}
+
+.brand-card h6 {
     font-size: 16px;
     margin: 0;
-  }
+}
 
-  .car-image {
+.car-image {
     max-width: 100%;
     height: auto;
 }
@@ -313,7 +320,8 @@ body {
 }
 
 .car-section ul li::before {
-    content: "\2022"; /* Bullet point */
+    content: "\2022";
+    /* Bullet point */
     color: #000;
     font-weight: bold;
     margin-right: 10px;
@@ -469,16 +477,22 @@ body {
 
 /* Footer */
 footer {
-    background-color: #111827; /* Dark background */
-    color: #ffffff; /* White text */
-  }
-  footer a {
-    color: #ffffff; /* White links */
+    background-color: #111827;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+}
+
+footer a {
+    color: #ffffff;
+    /* White links */
     text-decoration: none;
-  }
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  .footer-logo {
+}
+
+.footer-logo {
     max-width: 20rem;
-  }
+}

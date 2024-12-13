@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="global.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+    padding-bottom: -20px;
+    /* Reduce as necessary */
+}
+
+.search-form {
+    margin-top: -7rem;
+}
+  </style>
+
 </head>
 
 <body>
@@ -87,8 +98,8 @@
   </section>
 
   <!-- Search Form -->
-  <div class="container">
-    <div class="search-form custom-z-index ">
+  <div class="container mt-3"> <!-- Reduced margin-top -->
+    <div class="search-form custom-z-index">
       <form>
         <div class="row g-3">
           <div class="col-md-4 col-lg-3">
@@ -164,17 +175,16 @@
 
   <!-- Recently Viewed Cars -->
   <div class="container my-4">
-    <h2 class="mb-4">Recently viewed cars</h2>
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h4 class="text-muted">Cars You've Seen</h4>
-      <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+    <h2 class="mb-2">Recently viewed cars</h2> <!-- Reduced margin bottom -->
+    <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Reduced margin bottom -->
+      <h4 class="text-muted mb-0">Cars You've Seen</h4> <!-- Ensured proper alignment -->
+      <div class="d-flex justify-content-center align-items-center gap-2"> <!-- Reduced gap -->
         <!-- Previous Button -->
-        <button class="slider-button" id="prevButton">
+        <button class="slider-button btn btn-outline-secondary" id="prevButton">
           <i class="bi bi-arrow-left"></i>
         </button>
-
         <!-- Next Button -->
-        <button class="slider-button" id="nextButton">
+        <button class="slider-button btn btn-outline-secondary" id="nextButton">
           <i class="bi bi-arrow-right"></i>
         </button>
       </div>
@@ -251,90 +261,95 @@
     </div>
   </div>
 
+
   <!-- Brand Category Section -->
-  <div class="container my-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+  <div class="container my-4">
+    <!-- Section Title -->
+    <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Reduced margin -->
       <h4 class="fw-bold">Brand Category</h4>
     </div>
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h4 class="text-muted">There are 30+ Brand Categories Available</h4>
+    <!-- Subtitle and View All Link -->
+    <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Reduced margin -->
+      <h4 class="text-muted mb-0">There are 30+ Brand Categories Available</h4> <!-- No margin bottom -->
       <a href="#" class="text-primary">View all</a>
     </div>
-    <div class="row g-3">
+    <!-- Brand Cards -->
+    <div class="row g-2"> <!-- Reduced gap -->
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Audi.png" alt="Audi" class="brand-logo">
-          <h6>Audi</h6>
+          <h6 class="mt-2">Audi</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/bmw_of_north_america_logo.svg.png" alt="BMW" class="brand-logo">
-          <h6>BMW</h6>
+          <h6 class="mt-2">BMW</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/jeep_logo.svg.png" alt="Jeep" class="brand-logo">
-          <h6>Jeep</h6>
+          <h6 class="mt-2">Jeep</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Skoda.png" alt="Skoda" class="brand-logo">
-          <h6>Skoda</h6>
+          <h6 class="mt-2">Skoda</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/kia_logo.svg.png" alt="KIA" class="brand-logo">
-          <h6>KIA</h6>
+          <h6 class="mt-2">KIA</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Hundai.png" alt="Hyundai" class="brand-logo">
-          <h6>Hyundai</h6>
+          <h6 class="mt-2">Hyundai</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/peugeot-10 1.png" alt="Peugeot" class="brand-logo">
-          <h6>Peugeot</h6>
+          <h6 class="mt-2">Peugeot</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Tesla.png" alt="Tesla" class="brand-logo">
-          <h6>Tesla</h6>
+          <h6 class="mt-2">Tesla</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Mercedez.png" alt="Mercedes" class="brand-logo">
-          <h6>Mercedes</h6>
+          <h6 class="mt-2">Mercedes</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/Toyota.png" alt="Toyota" class="brand-logo">
-          <h6>Toyota</h6>
+          <h6 class="mt-2">Toyota</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/ford_motor_company_logo.svg.png" alt="Ford" class="brand-logo">
-          <h6>Ford</h6>
+          <h6 class="mt-2">Ford</h6>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <div class="brand-card">
+        <div class="brand-card text-center">
           <img src="Assets/volvo.png" alt="Volvo" class="brand-logo">
-          <h6>Volvo</h6>
+          <h6 class="mt-2">Volvo</h6>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- Recommendation Cars -->
   <div class="container my-4">
@@ -797,30 +812,32 @@
     </div>
   </div>
 
- 
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text Section -->
-        <div class="col-md-6 text-center text-md-start">
-          <h2 class="fw-bold">Get Autoassist Pro App</h2>
-          <p class="text-muted">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          </p>
-          <div class="mt-4">
-            <a href="#" class="btn btn-dark me-2">
-              <img src="Assets/googleplay.png" alt="Get it on Google Play" style="width: 150px;">
-            </a>
-            <a href="#" class="btn btn-dark">
-              <img src="Assets/Applestore.png" alt="Download on the App Store" style="width: 150px;">
-            </a>
-          </div>
-        </div>
-        <!-- Image Section -->
-        <div class="col-md-6 text-center mt-4 mt-md-0">
-          <img src="Assets/Frame 150.png" alt="App Preview" class="img-fluid" style="max-height: 500px;">
+
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Section -->
+      <div class="col-md-6 text-center text-md-start">
+        <h2 class="fw-bold">Get Autoassist Pro App</h2>
+        <p class="text-muted">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-dark me-2">
+            <img src="Assets/googleplay.png" alt="Get it on Google Play" style="width: 150px;">
+          </a>
+          <a href="#" class="btn btn-dark">
+            <img src="Assets/Applestore.png" alt="Download on the App Store" style="width: 150px;">
+          </a>
         </div>
       </div>
+      <!-- Image Section -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="Assets/Frame 150.png" alt="App Preview" class="img-fluid" style="max-height: 500px;">
+      </div>
     </div>
+  </div>
 
 
 
@@ -833,16 +850,16 @@
         <div class="col-md-4 text-center text-md-start">
           <img src="Assets/Autologowhite.png" alt="Autoassist Pro Logo" class="footer-logo mb-2">
           <!-- Quick Links -->
-        <div class="col-md-3">
-          <h6 class="fw-bold">Quick Links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
+          <div class="col-md-3">
+            <h6 class="fw-bold">Quick Links</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
         </div>
-        </div>
-        
+
         <!-- Contact Info -->
         <div class="col-md-3">
           <h6 class="fw-bold">Contact Us</h6>
@@ -856,10 +873,12 @@
           <h6 class="fw-bold">Download App</h6>
           <div>
             <a href="#">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="img-fluid mb-2" style="max-width: 150px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play" class="img-fluid mb-2" style="max-width: 150px;">
             </a>
             <a href="#">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="img-fluid" style="max-width: 150px;">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store" class="img-fluid" style="max-width: 150px;">
             </a>
           </div>
         </div>
@@ -879,8 +898,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</body>
+
 </body>
 
 </html>
